@@ -24,7 +24,7 @@ La etiqueta h nos permite escribir textos de distintos tamaños. El tamaño depe
 <h3>Esto es un texto en negritas mas pequeño</h3>
 
 > ## **< a >_texto_< /a >**
-Simboliza un vinculo. Nos permite asinar un vinculo a un texto.
+Simboliza un vinculo. Nos permite asinar un vinculo a un texto. Esto solo nos da la idea de que es un vinculo. 
 
 **Ejem:**
 ```html
