@@ -501,7 +501,7 @@ OutPut:
 </audio>
 
 ## **17. iFrame**
-Esta etiqueta os permite colocar contenido de otros sitios web en la pagina. Muchas paginas de internet ya contienen este bloque de HTML
+Esta etiqueta nos permite colocar contenido de otros sitios web en la pagina. Muchas paginas de internet ya contienen este bloque de HTML
 ```html
 <!--Ejem: Google Maps-->
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d963836.4699350597!2d-99.60497885!3d19.32640465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1681166438772!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -586,4 +586,275 @@ La etiqueta HTML nos permite envolver toda una paggina web. Siempre tendremos qu
 ```
 
 ## **22. Tablas**
+Como nota importante. No deberemos utilizar esto para crear estructura de las pagonas, solo para organizar datos tabulares. 
+```html
+<table>
+    <tr>
+        <th>Tecnologia Web</th>
+        <th>Funcion</th>
+        <th>Logo</th>
+    </tr>
+    <tr>
+        <td>HTML</td>
+        <td>Estructuracion</td>
+        <td><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/1024px-HTML5_Badge.svg.png"  width="30"></td>
+    </tr>
+    <tr>
+        <td>CSS</td>
+        <td>Estilo</td>
+        <td><img src = "https://cdn.worldvectorlogo.com/logos/css-3.svg" width = "30"></td>
+    </tr>
+    <tr>
+        <td>JavaScript</td>
+        <td>Interactividad</td>
+        <td><img src = "https://b.kisscc0.com/20180815/zlq/kisscc0-computer-icons-logo-brand-javascript-angle-js-5b741783856f77.0690615715343348515466.png" width = "30"></td>
+    </tr>
+</table>
+<!--table: Representa una tabla-->
+<!--tr: Table road. Filas de la tabla. Representa las filas-->
+<!--th: table head. Encabezado de la tabla-->
+<!--td: table data. Datos de la tabla. Representa un contenido de la tabla entre una fila y un encabezado-->
+```
 
+OutPut:
+
+<table>
+    <tr>
+        <th>Tecnologia Web</th>
+        <th>Funcion</th>
+        <th>Logo</th>
+    </tr>
+    <tr>
+        <td>HTML</td>
+        <td>Estructuracion</td>
+        <td><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/1024px-HTML5_Badge.svg.png"  width="30"></td>
+    </tr>
+    <tr>
+        <td>CSS</td>
+        <td>Estilo</td>
+        <td><img src = "https://cdn.worldvectorlogo.com/logos/css-3.svg" width = "30"></td>
+    </tr>
+    <tr>
+        <td>JavaScript</td>
+        <td>Interactividad</td>
+        <td><img src = "https://b.kisscc0.com/20180815/zlq/kisscc0-computer-icons-logo-brand-javascript-angle-js-5b741783856f77.0690615715343348515466.png" width = "30"></td>
+    </tr>
+</table>
+<!--table: Representa una tabla-->
+<!--tr: Table road. Filas de la tabla. Representa las filas-->
+<!--th: table head. Encabezado de la tabla-->
+<!--td: table data. Datos de la tabla. Representa un contenido de la tabla entre una fila y un encabezado-->
+
+## **21. Documento**
+¿Como se estructura una pagina web de principio a fin?
+
+1. Primero se crea un archivo Html.html
+2. Normalmente a las paginas que navegaremos se llaman index.html (Pagina Principal del proyecto) En el, escribimos lo siguiente. 
+
+```html
+<!doctype html> <!--Le indica al navegador que tipo de archivo es este. La etiqueta no incluye etiqueta de cierre. -->
+<html lang = "es" dir = "rtl" charset = "UTF-8"> <!--Nos representa la raiz del documento. Aqui agregaremos todo el HTML que vamos a escribir. En una buena practica escribir ciertos atributos globales en esta etiqueta. charset: Formato de codificacion de caracteres. Es similar a ASCII (128 caracteres), pero el UTF-8(130,000) tiene mayor caracteres  -->
+
+<!--Informacion no visible que el navegador necesita-->
+<head></head>
+
+<!-- Todo el contenido visible para los usuarios-->
+<body><body>
+
+</html>
+
+```
+
+## **22. Head**
+¿Que incluimos entre la etiqueta &lt;head&gt;&lt;/head&gt;? 
+Lo primero que podemos incluir es el elemento &lt;meta&gt;
+
+```html
+<head>
+    <meta charset = "UTF-8"/> <!--Es un tag que permite incluir informacion sobre la pagina dependiendo del atributo. si se incluye aqui no se requiere incluirlo en la etiqueta HTML-->
+    <title>Mi Pagina Web</title> <!--Aqui se incluye el titulo de la pagina Web. Este titulo se muestra en la pestañita que se abre en cada navegador-->
+    <link rel = "stylesheet" href = "css/style.css" /><!--rel: Indica que tipo de recurso es este. Ademas href indica el archivo css que utilizaremos -->
+    <script src = "js/script.js" ></script><!--Esta va a cargar un archivo javascript. Script se utiliza para importar archivos de javascript-->
+    <!--Cuando entramos a un navegador lo primero que se baja de un servidor es el arcgivo HTML y una vez que se baje la pagina se va a leer linea por linea. En este ejemplo, primero va a leer que el charset es de UFT-8, despues que el titulo de la pagina se llama Mi Pagina Web. Despues va a leer que necesita un recurso de CSS y despues que tambien necesita uno de java script. Cabe recalcar que si los archivos css y js estan muy pesados el navegador demorara mucho en descargarlos, por lo tanto, es comveniente que estos archivos sean pequeños o se agregue lo mas importante primero y despues lo demas -->
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1"/> <!--Esta linea lo que hace es ajustar la pagina a la pantalla-->
+
+    <!--Las siguientes etiquetas contienen mas informacion de la pagina-->
+
+    <meta name = "description" content = "Pagina de ejemplo sobre aprendizaje en HTML"/>
+    <meta name = "application-name" content = "Aplicacion de HTML"/> <!--En caso de que la pagina se comporte como una aplicacion-->
+    <meta name = "msapplication-TileImage" content = "/img/mstile-144x144.png"/><!--El anterior se utiliza cuando se quiere utilizar un icono de l apagina en windows-->
+    <meta name = "theme-color" content = "#000000"/> <!--Indica al navegador que utilice un color especifico para el navegador-->
+
+    <link rel = "manifest" href = "/manifest.json"/> <!--En ese archivo se incluira la version de la pagina, el nombre, el autor, una descripcion y demas informacion-->
+    <link rel = "icon" href = "/favicon.ico"/> <!--Es el icono que se ve cuando navegamos sobre una pagina web -->
+    <link rel = "preload" href = "/font.woff2" as = "font" type = ""> <!----incluye un archivo .woff2 el cual es un archivo de tipo grafia que incluye diferentes estilos de texto. Algunos estilos no estan incluidos en el navegador asi que deberan incluirse. >
+
+    <meta >
+
+
+</head>
+```
+
+## **23. Body**
+> Cuando no escribimos la etiqueta **body** el navegador lo va crear de forma automatica. Es necesario siempre definir la etiqueta body. 
+
+> Tenemos que agurarnos de incluir el atributo **charset** para trabajar con una variedad de carcateres. El atributo se puede incluir en la etiqueta html o en una etiqueta meta entre la etiqueta head. 
+ 
+¿Que es lo que se suguiere incluir en la etiqueta **body**? Ejemplo:
+
+```html
+<!-- Estructura semantica -->
+<body>
+    <!-- Elementos de navegacion -->
+    <nav>
+
+    </nav>
+    <!-- Encabezado -->
+    <head>
+        <h1></h1><!-- El titulo -->
+        <!-- Informacion de la pagina -->
+    </head>
+    <!-- Contenido principal de la pagina -->
+    <main>
+        <!-- Aticulo: Unidad de informacion -->
+        <article></article>
+        <!-- Secciones de contenido -->
+        <section></section>
+        <!-- Contenido de lado -->
+        <aside></aside>
+    </main>
+</body>
+```
+No es extrictamente necesario seguir la estructura semantica del ejemplo anterior. Es necesario saber como organizar adecuadamente las etiquetas de estructuracion
+
+## **24. Inputs**
+Existen diversos tipos de inputs. Todos se definen con la etiqueta **input** el tipo de input cambiara de acuerdo al valor que se le asigne al atributo **_type_**. El elemnto **Input** es una etiqueta de cierre automatico **Ejem:**
+
+```html
+<input type = "password" placeholder = "Password" />
+<input type = "search" placeholder = "Search"/>
+<input type = "text" placeholder = "Text"/>
+<input type = "phone" placeholder = "55-11-09-34-67"/>
+<input type = "data" />
+<input type="date" value="2023-04-11" />
+<input type = "color" />
+<input type = "file" accept = "image/*" multiple/>
+<!-- multiple: multiple. Permite seleccionar multiples archivos. -->
+<!-- accept: acepto. Indica que tipo de archivos acepta. -->
+<!-- Con JS seremos capaces de manipular los archivos que los usuarios subiran -->
+<input type = "checkbox" value = "El checkbox esta marcado"  checked/>
+<!-- Este tipo de input contiene un valor atras de el. El valor esta definido con el atributo value. Se puede establecer el atributo checked para establecer que por defecto esta verificada (checked). -->
+```
+<input type = "password" placeholder = "Password" required/>
+<!--  required: requerido. Indica que el valor es requerido para acceder.-->
+<input type = "search" placeholder = "Search"/>
+<input type = "text" placeholder = "Text"/>
+<input type = "phone" placeholder = "55-11-09-34-67"/>
+<input type = "data" />
+<input type="date" value="2023-04-11" />
+<input type = "color" />
+<input type = "file" accept = "image/*" multiple/>
+<!-- multiple: multiple. Permite seleccionar multiples archivos. -->
+<!-- accept: acepto. Indica que tipo de archivos acepta. -->
+<!-- Con JS seremos capaces de manipular los archivos que los usuarios subiran -->
+<input type = "checkbox" value = "El checkbox esta marcado"  checked/>
+<!-- Este tipo de input contiene un valor atras de el. El valor esta definido con el atributo value. Se puede establecer el atributo checked para establecer que por defecto esta verificada (checked). -->
+<input type = "radio">
+<!-- radio: Biñeta -->
+
+## **25. FieldSet (Conjunto de campos)**
+Esta etiqueta permite agrupar diferentes tipos de inputs. El FielSet es bueno utilizarlo cuando se estan creando formularios
+
+> La diferencia entre el radio y el checkbox es que cuando se selecciona el radio ya no se puede remover la seleccion y el checkbox si. 
+
+```html
+<!-- Ejemplo de FreeCodeCamp.com -->
+<fieldset>
+    <legend>CheckBoxesFreeCodeCamp</legend> <!--legend: legenda. -->
+    <label><input type = "checkbox" value = "Uno"/>Uno</label>
+    <label><input type = "checkbox" value = "Dos"/>Dos</label>
+    <label><input type = "checkbox" value = "Tres"/>Tres</label>
+</fieldset>
+<br/>
+<!-- Ejemplo de Academia X -->
+<fieldset>
+    <legend>CheckBoxesAcademiaX</legend>
+    <input id = "uno" type = "checkbox" value = "Uno">
+    <label for = "uno" >Uno</label>
+    <input id = "dos" type = "checkbox" value = "Dos">
+    <label for = "dos" >Dos</label>
+    <input id = "tres" type = "checkbox" value = "Tres">
+    <label for = "tres" >Tres</label>
+</fieldset>
+<!-- id: identification.  -->
+<!-- for: para -->
+```
+Output:
+<!-- Ejemplo de FreeCodeCamp.com -->
+<fieldset>
+    <legend>CheckBoxesFreeCodeCamp</legend> <!--legend: legenda. -->
+    <labelin><input type = "checkbox" value = "Uno"/>Uno</label>
+    <label><input type = "checkbox" value = "Dos"/>Dos</label>
+    <label><input type = "checkbox" value = "Tres"/>Tres</label>
+</fieldset>
+<br/>
+<!-- Ejemplo de Academia X -->
+<fieldset>
+    <legend>CheckBoxesAcademiaX</legend>
+    <input id = "uno" type = "checkbox" value = "Uno">
+    <label for = "uno" >Uno</label>
+    <input id = "dos" type = "checkbox" value = "Dos">
+    <label for = "dos" >Dos</label>
+    <input id = "tres" type = "checkbox" value = "Tres">
+    <label for = "tres" >Tres</label>
+</fieldset>
+<!-- id: identification.  -->
+<!-- for: para -->
+
+## **Form (Formulario)**
+Ahora vamos a ver una de las formas en la que una aplicacion da acceso a los usuarios y esto es creando un aforma de _login_ (ingreso). 
+> Para ingresar la informacion de los inputs al servidor se utiliza la etiqueta _&lt;form&gt;_ 
+
+```html
+<form action = "https://freecatphotoapp.com/submit-cat-photo" method = "POST">
+    <!-- action: Acccion. Indica a donde debera mandarse los datos del formulario. -->
+    <!--method. Indica el metodo que tendra el formulario hacia la referencia indicada en el atributo action. Existen 3 diferentes metodos. GET, POST and dialog-->
+        <label>
+        <h2>Sign In</h2>
+        <h3>to continued to Gmail</h3>
+            Name
+            <input type = "text" name = "name" placeholder = "Julio Misael"/>
+        </label>
+        <br/>
+        <a>Forget email?</a>
+        <br />
+        <lable>
+            E-mail
+            <input type = "email" name = "email" placeholder = "myemail@gmail.com" required/>
+        </lable>
+        <!--Ademas, para ingresar los datos del form utilizaremos un botton-->
+        <br />
+        <button>Sing In</button>
+    </form>
+```
+
+<form action = "https://freecatphotoapp.com/submit-cat-photo" method = "POST">
+    <!-- action: Acccion. Indica a donde debera mandarse los datos del formulario. -->
+    <!--method. Indica el metodo que tendra el formulario hacia la referencia indicada en el atributo action. Existen 3 diferentes metodos. GET, POST and dialog-->
+        <label>
+        <h2>Sign In</h2>
+        <h3>to continued to Gmail</h3>
+            Name
+            <input type = "text" name = "name" placeholder = "Julio Misael"/>
+        </label>
+        <br/>
+        <a>Forget email?</a>
+        <br />
+        <lable>
+            E-mail
+            <input type = "email" name = "email" placeholder = "myemail@gmail.com" required/>
+        </lable>
+        <!--Ademas, para ingresar los datos del form utilizaremos un botton-->
+        <br />
+        <button>Sing In</button>
+    </form>

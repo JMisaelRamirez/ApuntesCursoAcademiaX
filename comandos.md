@@ -313,7 +313,7 @@ Ouput
 
 <input type = "text">
 
-> ## **Atributo name"
+> ## **Atributo name**
 
 In order for a form's data to be accessed by the location specified in the action attribute, you must give the text field a name attribute and assign it a value to represent the data being submitted. For example, you could use the following syntax for an email address text field: 
 
@@ -331,14 +331,14 @@ ouput
 
 > ## **Atributo placeholder**
 
-Placeholder text is used to give people a hint about what kind of information to enter into an input. For example, 
+Placeholder (marcadores de lugar) text is used to give people a hint about what kind of information to enter into an input. For example, 
     
     <input type="text" placeholder="Email address">.
 
 Add the placeholder text cat photo URL to your input element.
 
 ```html
-<input type="text" name="catphotourl" placeholder = "cat photo URL"></input>
+<input type="text" name="catphotourl" placeholder = "cat photo URL"/>
 ```
 
 ouput
