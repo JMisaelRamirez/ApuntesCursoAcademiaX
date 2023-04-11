@@ -1,11 +1,15 @@
+
+* HTML permite estructura un pagina WEB
+* Algunos atributos no llevan valor. Solo significan true. Ejem: loop autoplay
 # **APUNTES DE HTML**
 ## **1. Set Up**
 
-* HTML permite estructura un pagina WEB
 
 ### **Extension _HTML Preview de George Oliveira**
 Esta extension nos permite vizualizar el codigo HTML dentro de VSC
 
+### **Extension Live Server de Ritwick Dey**
+Nos evita refrescar la pagina web ya que lo hace de forma automatica. 
 ### **Etiquetas**
 Las etiquetas se simbolizan de la siguiente manera <_letra_></_letra_>. Cada una de las etiquetas en HTML simbolizan algo.
 
@@ -355,5 +359,231 @@ OutPut:
 ## **10. Navegacion**
 Una pagina Web esta constituida por diferentes archivos HTML. Para navegar entre los archivos HTMl se utilizan las rutas (Vinculos). En realidad, cuando creamos archivos de HTML podremos navegar entre estos, pero, si quisieramos que mas gente acceda a nuestra pagina web, estas personas deberan de tener los archivos HTML para aceder a esta lo cual nos indica que seria imposible pasarle nuestros archivos HTML a cada persona, para ello, es comveniente comprar un servidor, que son computadoras que contienen nuestros archivos, y ademas, un dominio, por ejemplo www._nombreDelDominio_.com para que cada vez que las personas accedan a nuestro dominio los servidores proporcionen cada archivo HTML cuando las personas requieran acceder a este. 
 
+## **11. Barras**
+### **Barras de Navegacion**
+Nos permite navegar sobre todo el dominio o nuestra pagina web. 
 
+```html
+<nav role = "navigation" aria-label = "menu principal"> <!--nav: Navegation. Nos indica una area de navigation. Indica una area que contendra varios vinculos
+aria.label: Indica el nombre de la seccion de navegacion.
+role: Roll. Nos indica el roll que tendra el area de navegacion-->
+    <a hre= "/">Home</a>
+    <a href = "/blog.html">blog</a>
+    <a href = "/sections/Acerca de">acerca de</a>
+</nav>
+<!--El HTML anterior es igual a:-->
+<nav role = "navigation" aria-label = "menu principal">
+    <a href = "nombreDelDomino.com"></a>
+    <a href = "nombreDelDomino.com/blog.html">blog</a>
+    <a href = "nombreDelDomino.com/sections/Acerca de">acerca de</a>
+</nav>
+```
+
+OutPut:
+<nav role = "navigation" aria-label = "menu principal">
+    <a hre= "/">Home</a>
+    <a href = "/blog.html">blog</a>
+    <a href = "/sections/Acerca de">acerca de</a>
+</nav>
+<!--El HTML anterior es igual a:-->
+<nav role = "navigation" aria-label = "menu principal">
+    <a href = "nombreDelDomino.com">Home</a>
+    <a href = "nombreDelDomino.com/blog.html">blog</a>
+    <a href = "nombreDelDomino.com/sections/Acerca de">acerca de</a>
+</nav>
+
+### **Pie de pagina**
+Es comun, actualmente, que se utilice el pie de pagina para agregar vinculos de navegacion. 
+
+```html
+<footer> <!--footer: Pie de pagina. Indica una area de pie de pagina-->
+    <a hre= "/">Home</a>
+    <a href = "/blog.html">blog</a>
+    <a href = "/sections/Acerca de">acerca de</a>
+</footer>
+```
+
+OutPut:
+<footer> <!--footer: Pie de pagina. Indica una area de pie de pagina-->
+    <a hre= "/">Home</a>
+    <a href = "/blog.html">blog</a>
+    <a href = "/sections/Acerca de">acerca de</a>
+</footer>
+
+## **12. Imagenes**
+Los elementos &lt;img&gt; se auto cierran (No requiere cerrarse la etiqueta con &lt;/img&gt;)
+
+```html
+<!--Con src correcto-->
+<b>Con src correcto</b>
+<br>
+<img src = "https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt = "Orange Cat lying on its back">
+
+<!--con src incorrecto-->
+<b>Con src incorrecto</b>
+<br>
+<img src = "https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jp" alt = "Orange Cat lying on its back">
+<!--alt: alternative (alternativo).Describe a la imagen. Sirve igual cuando por alguna razon no podemos ver la imagen mostrara esa descripcion.-->
+<!--src: Source (Fuente). Indica la fuente de la imagen-->
+<!--width: Ancho. Representa en pixeles el ancho de la imagen -->
+<!--height: Altura. Representa la altura de la iagen en pixeles-->
+<!--Si quisieramos mantener la escala de la foto es necesario solo utilizar height o width para que la imagen se escale de forma automatica.-->
+<!---- En la actualidad ya no se ocupa wigth o lenght, se ocupa CSS como remplazo>
+```
+OutPut: 
+
+<!--Con src correcto-->
+<b>Con src correcto</b>
+<br>
+<img src = "https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt = "Orange Cat lying on its back">
+
+<!--con src incorrecto-->
+<b>Con src incorrecto</b>
+<br>
+<img src = "https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jp" alt = "Orange Cat lying on its back">
+
+## ** 13. Resolucion**
+Con el atributo _srcset_ se pude mostrar imagenes del tamaño que es mejor para la resolucion (tamaño) de nuestra pantalla. Cabe recalcar que aun si se usa el atributo _srcset_ tambien es necesario utlizar _src_. _src_ debera igualarse a la imagen con tamaño menor (default). 
+```html
+<img src = "https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jp" alt = "Orange Cat lying on its back" srcset = "rutaDeLaImagen1 2X,rutaDeLaImagen2 4x, rutaDeLaImagen3 6x">
+```
+## **14. Figura**
+La etiqueta **&lt;figcaption&gt;** ayuda a la semantica para los buscadores. Por que incluir una descripcion de alguna imgane puede dar muchos detalles acerca de la imagen. Si se hace una busqueda de esa imagen en google sera mas facil ser encontrada gracias a esa descripcion. 
+
+```html
+<figure> <!--Se inicia con esta etiqueta figure (figura)-->
+    <img src = "https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt = "Gatito acostado de espaldas">
+    <figcaption>Este es un gato acostado de espaldas</figcaption>
+</figure>
+<!--figcaption: figure caption -> pie de figura-->
+```
+
+OutPut:
+<figure>
+    <img src = "https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt = "Gatito acostado de espaldas">
+    <figcaption>Este es un gato acostado de espaldas</figcaption>
+</figure>
+
+## **15. Foto (Picture)**
+Esta etiqueta nos permite indicar diferentes fuentes de donde viene nuestra imagen. Estos atributos pueden ser muy utiles, pero hay que recordar que tambien podemos utilizar css para el mismo objetivo por que este es mas relacionado con los estilos. En HTML se utiliza para optimizar, ya que el navegar va a leer primero el HTML y basado en el HTML va a descargar las imagenes. 
+```html
+<picture>
+    <source media = "(min - width:1200px)" srcset = "./1200.jpg">
+    <!--La fuente de la primer imagen es ./1200.jpg. Media nos indica en que tamaño del navegador vamos a mostrar esta imagen, en este caso : (min - width:1200px)-->
+    <source media = "(min - width:600px)" srcset = "./600.jpg">
+    <img src= "./FotosPrueba/greninja-300.jpg" alt = "Greminja el Pokemon de Ash" width = "600">
+    <!--Aca se coloca la imagen por defecto-->
+</picture>
+```
+## **16. Audio**
+### **Formato Simple**
+Esta etiqueta de audio nos permetira utilizar audio en nuestra pagina Web.
+```html
+<audio controls src = "./AudioPruebas/pruebaAudio.mp3" loop autoplay></audio> <!--controls: Nos permite visualizar los controles. loop autoplay: Nos permite repetir la cancion.-->
+```
+<audio controls src = "./AudioPruebas/pruebaAudio.mp3" loop autoplay></audio>
+
+### **Diversos Formatos**
+
+```html
+<audio controls loop autoplay >
+    <source src = "./AudioPruebas/pruebaAudio.mp3" type = "audio/mpeg">
+    <source src = "./AudioPruebas/pruebaAudio.mp3" type = "audio/ogg; code = opus">
+    Lo sentimos. Tu navegador no soporta  este formato
+</audio>
+```
+OutPut:
+
+<audio controls loop autoplay >
+    <source src = "./AudioPruebas/pruebaAudio" type = "audio/mpeg">
+    <source src = "./AudioPruebas/pruebaAudio" type = "audio/ogg; code = opus">
+    Lo sentimos. Tu navegador no soporta  este formato
+</audio>
+
+## **17. iFrame**
+Esta etiqueta os permite colocar contenido de otros sitios web en la pagina. Muchas paginas de internet ya contienen este bloque de HTML
+```html
+<!--Ejem: Google Maps-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d963836.4699350597!2d-99.60497885!3d19.32640465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1681166438772!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<!--Ejem: Youtube-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8mPOxNnXBSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+## **18. Contenedores**
+Para que sirve envolver el contenido. A lo mejor queremos agregar un estilos a un grupo de etiquetas y sepueden pueden colocar en un div o un span.
+### **Contenedor en linea**
+```html
+<div>Soy un div</div>
+<div>Soy un div</div>
+<div>Soy un div</div>
+```
+Output:
+<div>Soy un div</div>
+<div>Soy un div</div>
+<div>Soy un div</div>
+
+### **Contenedor en bloque**
+```html
+<span>Soy un span</span>
+<span>Soy un span</span>
+<span>Soy un span</span>
+```
+Output:
+<span>Soy un span</span>
+<span>Soy un span</span>
+<span>Soy un span</span>
+
+## **19. Atributos globales**
+Hay atributos que son unicos para cierto tipo de etiquetas. Aun que, existen atributos globales. Estos atributos se pueden colocar en cada etiqueta. La identificacion
+
+* id: (Identification - > Identificacion) Sirve para identificar una etiqueta. Se utiliza mucho para ientificar una etiqueta. Se le puede dar cualquier nombre o numero. La identificacion no es util por si sola, empieza hacer util cuando se trabaja igual con CSS por que asi podremos identificar que estilos colocar a cierta identificacion
+**Ejem:**
+```html
+<p id = "Esto es un mensaje de bienvenida">Hola como estas</p>
+```
+* class: Clase. Tambien es una tipo de identificacion. A diferencia del id, el mimso valor del valor del atributo class puede ser el mismo para varias etiquetas.
+* contenteditable: Contenido editable. Nos indica y nos permite editar el contenido entre la etiqueta. 
+```html
+<p contenteditable = "True">Este texto se puede editar</p>
+```
+Output:
+<p contenteditable = "True">Este texto se puede editar</p>
+
+* lang: Lenguage (lenguaje). Este atributo define que el texto o cual vinculo esta escrito o esta en ingles. Esto le permite navegador o a google buscar y ofrecer contenido mas rapido.
+```html
+<p leng = "es-MX">Este texto esta en español de mexico</p>
+<p leng = "es">Este texto esta en español</p>
+```
+* dir: Direction (Direccion): Nos permite indicar en que direccion se escribe o se muestra el contenido. 
+
+```html
+<p dir = "rtl">Este texto podria ser un texto en arabe</p>
+```
+
+Output:
+<p dir = "rtl">Este texto podria ser un texto en arabe</p>
+
+## **20. Accesibilidad**
+Sirve para que las personas con discapacidades puedan acceder a la pagina web utilizando herramientas para discapacitados. GRacias a lo siguiente, podremos usar eso. 
+<div aria-label = "H20">
+    <div aria-hidden = "true">
+        <span>H</span>
+        <span>2</span>
+        <span>0</span>
+    </div>
+</div>
+
+## **21. Lenguaje**
+La etiqueta HTML nos permite envolver toda una paggina web. Siempre tendremos que definir en que lenguaje estara nuestra pagina web. Lo recomendable es agregar el lenguaje en la etiqueta que va a envolver a todo el archivo de HTML o cuando una palabra se defina en otro lenguaje al que estamos trabajando. 
+
+```html
+<!--Ingles de USA-->
+<html lang = "en-US"></html>
+<!--Ingles de GranBretaña-->
+<html lang = "en-GB"></html>
+<!--Español de mexico-->
+<html lang = "es-MX"></html>
+```
+
+## **22. Tablas**
 
