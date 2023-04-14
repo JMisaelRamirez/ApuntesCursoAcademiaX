@@ -442,7 +442,7 @@ OutPut:
 <br>
 <img src = "https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jp" alt = "Orange Cat lying on its back">
 
-## ** 13. Resolucion**
+## **13. Resolucion**
 Con el atributo _srcset_ se pude mostrar imagenes del tamaño que es mejor para la resolucion (tamaño) de nuestra pantalla. Cabe recalcar que aun si se usa el atributo _srcset_ tambien es necesario utlizar _src_. _src_ debera igualarse a la imagen con tamaño menor (default). 
 ```html
 <img src = "https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jp" alt = "Orange Cat lying on its back" srcset = "rutaDeLaImagen1 2X,rutaDeLaImagen2 4x, rutaDeLaImagen3 6x">
@@ -510,7 +510,7 @@ Esta etiqueta nos permite colocar contenido de otros sitios web en la pagina. Mu
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8mPOxNnXBSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 ## **18. Contenedores**
-Para que sirve envolver el contenido. A lo mejor queremos agregar un estilos a un grupo de etiquetas y sepueden pueden colocar en un div o un span.
+ Para que sirve envolver el contenido. A lo mejor queremos agregar un estilos a un grupo de etiquetas y sepueden pueden colocar en un div o un span.
 ### **Contenedor en linea**
 ```html
 <div>Soy un div</div>
@@ -520,7 +520,7 @@ Para que sirve envolver el contenido. A lo mejor queremos agregar un estilos a u
 Output:
 <div>Soy un div</div>
 <div>Soy un div</div>
-<div>Soy un div</div>
+<div>Soy un div ☰</div>
 
 ### **Contenedor en bloque**
 ```html
@@ -811,7 +811,7 @@ Output:
 <!-- id: identification.  -->
 <!-- for: para -->
 
-## **Form (Formulario)**
+## **27. Form (Formulario)**
 Ahora vamos a ver una de las formas en la que una aplicacion da acceso a los usuarios y esto es creando un aforma de _login_ (ingreso). 
 > Para ingresar la informacion de los inputs al servidor se utiliza la etiqueta _&lt;form&gt;_ 
 
@@ -828,10 +828,10 @@ Ahora vamos a ver una de las formas en la que una aplicacion da acceso a los usu
         <br/>
         <a>Forget email?</a>
         <br />
-        <lable>
+        <label>
             E-mail
             <input type = "email" name = "email" placeholder = "myemail@gmail.com" required/>
-        </lable>
+        </label>
         <!--Ademas, para ingresar los datos del form utilizaremos un botton-->
         <br />
         <button>Sing In</button>
@@ -850,11 +850,14 @@ Ahora vamos a ver una de las formas en la que una aplicacion da acceso a los usu
         <br/>
         <a>Forget email?</a>
         <br />
-        <lable>
+        <label>
             E-mail
             <input type = "email" name = "email" placeholder = "myemail@gmail.com" required/>
-        </lable>
+        </label>
         <!--Ademas, para ingresar los datos del form utilizaremos un botton-->
         <br />
         <button>Sing In</button>
     </form>
+
+## **28. Depuracion**
+Es posible que aveces encontremos errores cuando se trabaja con HTML. Si uno comete un error al en el HTML el navegador intentara corregir ese error. 

@@ -11,6 +11,7 @@
 * HyperLink - Hiper Vinculo
 * checkbox - casilla de verificacion
 * Form Data - Datos del Formulario
+* Sorting - ordenación
 
 
 
